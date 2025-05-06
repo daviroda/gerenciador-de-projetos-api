@@ -1,4 +1,4 @@
-import { createServer, defaults, bodyParser } from 'json-server';
+import { createServer, defaults} from 'json-server';
 import cors from 'cors'; // Se você estiver usando CORS
 
 const server = createServer({
