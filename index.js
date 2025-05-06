@@ -66,24 +66,3 @@ app.listen(port, () => {
 
 // Para o Vercel, você precisa exportar o 'app' para que ele possa ser usado como uma função serverless
 export default app;
-
-//
-
-const { createServer, defaults, bodyParser } = require('json-server');
-const server = createServer({
-  ...defaults(),
-  readOnly: true
-});
-
-server.use(bodyParser);
-
-// Adicione esta rota para responder à raiz
-server.get('/', (req, res) => {
-  res.send('Bem-vindo à minha API!');
-});
-
-server.listen(port, () => {
-  console.log(`JSON Server is running on port ${port}`);
-});
-
-module.exports = server;
