@@ -1,3 +1,12 @@
+import { createServer, defaults, bodyParser } from 'json-server';
+import cors from 'cors'; // Se você estiver usando CORS
+
+const server = createServer({
+  ...defaults(),
+  readOnly: true // Ou false, dependendo das suas necessidades
+});
+
+
 // Importe os módulos necessários
 import express from 'express';
 import cors from 'cors';
