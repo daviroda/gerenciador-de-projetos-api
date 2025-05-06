@@ -8,12 +8,9 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/$1" 
-    },
-    {
       "src": "/(.*)",
-      "dest": "/" 
+      "dest": "/"
     }
-  ]
+  ],
+  "includeFiles": ["db.json"]
 }
